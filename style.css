@@ -1,15 +1,13 @@
 /* ! Css reusable classes to reset all the default browser settings to default. */
 
-
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
-  --font-os: 'Open Sans', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
+  --font-os: "Open Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
 }
-
 
 * {
   padding: 0;
@@ -20,13 +18,19 @@
   text-decoration: none;
 }
 
-
-body{
+body {
   background-color: var(--violet);
+  min-height: 100vh;
+  background-image: url("./images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
-
-.container{
+.container {
   margin-top: 7rem;
 }
 
@@ -37,14 +41,12 @@ body{
   margin-top: 2rem;
 }
 
-
 .container__subtitle {
   font-family: var(--font-poppins);
   font-size: 2.4rem;
   color: white;
   margin-bottom: 1rem;
 }
-
 
 .container__description {
   color: white;
@@ -53,11 +55,9 @@ body{
   line-height: 1.5rem;
 }
 
-
-.container__image{
+.container__image {
   margin: 4rem 4rem;
 }
-
 
 .container__button {
   font-family: var(--font-poppins);
@@ -70,88 +70,81 @@ body{
   width: 5rem;
   height: auto;
   cursor: pointer;
-  box-shadow: -2px 7px 15px -9px rgba(0,0,0,0.75);;
+  box-shadow: -2px 7px 15px -9px rgba(0, 0, 0, 0.75);
 }
-
 
 /** Grid container responsible for the grid and changing the width */
 
-
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
 }
 
-
 /*? Designing the footer social icons */
-
 
 .social__icons i {
   color: white;
   border: 1px solid white;
   border-radius: 50%;
-  padding: .5rem;
-  margin-left: .5rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-
-.social__icons{
+.social__icons {
   position: absolute;
   right: 4rem;
 }
 
-.bg-desktop{
+.bg-desktop {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
 
-.bg-mobile{
+.bg-mobile {
   display: none;
 }
 
 /* TODO Media queries responsive for responsiveness across all devices */
 
-
-@media only screen and (max-width: 600px ){
-  .grid-container{
+@media only screen and (max-width: 600px) {
+  .grid-container {
     grid-template-columns: 1fr;
   }
-  
-  .container__image{
+
+  .container__image {
     height: 19rem;
     width: auto;
     margin-left: 2rem;
   }
 
-  .container__logo{
+  .container__logo {
     margin-left: 2rem;
   }
 
-  .container{
+  .container {
     margin-left: 2rem;
     margin-top: 1rem;
   }
 
-  .container__description{
+  .container__description {
     text-align: center;
     margin-right: 2rem;
   }
 
-
-  .container__subtitle{
+  .container__subtitle {
     text-align: center;
     margin-right: 3rem;
     font-size: 1.6rem;
   }
 
-  .social__icons{
+  .social__icons {
     right: 13rem;
     margin-top: 6rem;
   }
 
-  .container__button{
+  .container__button {
     margin-left: 6rem;
     width: 20vw;
     height: auto;
@@ -159,7 +152,7 @@ body{
     padding-right: 5rem;
   }
 
-  .bg-mobile{
+  .bg-mobile {
     display: block;
     position: absolute;
     left: 0;
@@ -167,12 +160,11 @@ body{
     z-index: -1;
   }
 
-  .bg-desktop{
+  .bg-desktop {
     display: none;
   }
 
-  .word-break{
+  .word-break {
     word-break: break-all;
   }
 }
-
